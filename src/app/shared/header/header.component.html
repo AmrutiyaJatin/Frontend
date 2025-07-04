@@ -1,0 +1,21 @@
+<!-- src/app/shared/header/header.component.html -->
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/">Furniture Portal</a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a routerLink="/sell-furniture" routerLinkActive="active">Sell Furniture</a></li>
+        <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/order-history" routerLinkActive="active">Orders</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="/register" routerLinkActive="active">Register</a></li>
+        <li *ngIf="isLoggedIn"><button (click)="onLogout()">Logout</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+

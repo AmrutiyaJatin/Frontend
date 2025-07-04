@@ -1,0 +1,1 @@
+export const API_GATEWAY_URL = 'http://localhost:7000'; // Your API Gateway's URL

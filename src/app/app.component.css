@@ -1,0 +1,5 @@
+main {
+  min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}

@@ -1,0 +1,16 @@
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+<div *ngIf="pendingRequests.length === 0">No pending requests.</div>
+<div *ngFor="let req of pendingRequests" class="request-card">
+  <img [src]="getImageUrl(req)" alt="Furniture Image" width="200" />
+  <div>
+    <h3>{{ req.title }}</h3>
+    <p><strong>Description:</strong> {{ req.description }}</p>
+    <p><strong>Expected Price:</strong> {{ req.expectedPrice | currency }}</p>
+    <p><strong>Seller User ID:</strong> {{ req.userId }}</p>
+    <p><strong>Status:</strong> {{ req.status }}</p>
+    <p><strong>Created At:</strong> {{ req.createdAt | date:'medium' }}</p>
+    <button (click)="approveRequest(req)">Approve</button>
+    <button (click)="rejectRequest(req)">Reject</button>
+  </div>
+</div>

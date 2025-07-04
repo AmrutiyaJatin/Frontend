@@ -1,0 +1,146 @@
+.checkout-container {
+  padding: 30px 0;
+}
+
+.checkout-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.shipping-details {
+  flex: 2 1 55%;
+  min-width: 300px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.shipping-details h3, .order-summary h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.order-summary {
+  flex: 1 1 35%;
+  min-width: 280px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.summary-items {
+  margin-bottom: 20px;
+  max-height: 250px; /* Limit height for scroll if many items */
+  overflow-y: auto;
+  padding-right: 10px; /* For scrollbar */
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #666;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #28a745;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.place-order-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.place-order-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.place-order-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.loading-message, .empty-cart-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  padding: 50px;
+}
+
+.empty-cart-message a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.empty-cart-message a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .shipping-details, .order-summary {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+}
